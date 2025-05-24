@@ -22,6 +22,7 @@ export default function DebunkerPlatform() {
   const [analysis, setAnalysis] = useState<AnalysisResult | null>(null)
   const [leaderboard, setLeaderboard] = useState<number[] | null>(null)
   const [loading, setLoading] = useState(false)
+  const [centerMode, setCenterMode] = useState(true)
 
   const { scrollY } = useScroll()
   const bgY = useTransform(scrollY, [0, 500], ['0%', '50%'])
@@ -67,8 +68,12 @@ export default function DebunkerPlatform() {
         animate={{ opacity: [0.6, 0.8, 0.6] }}
         transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
       />
-
-      <div className="justify-items-center p-8 max-w-7xl mx-auto min-h-screen text-white">
+      <div
+        className={`
+          ${centerMode ? 'flex items-center justify-center' : 'p-8'}
+          max-w-7xl mx-auto min-h-screen text-white
+        `}
+      >
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
