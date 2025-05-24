@@ -69,7 +69,6 @@ export default function DebunkerPlatform() {
       />
 
       <div className="justify-items-center p-8 max-w-7xl mx-auto min-h-screen text-white">
-        {/* Main card with glassmorphic backdrop */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,7 +86,6 @@ export default function DebunkerPlatform() {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
-            {/* Input with glowing focus halo */}
             <motion.div whileFocus={{ scale: 1.02 }} transition={{ type: 'spring', stiffness: 300 }}>
               <Input
                 value={claim}
@@ -97,7 +95,6 @@ export default function DebunkerPlatform() {
               />
             </motion.div>
 
-            {/* Cinematic, rippling button */}
             <motion.button
               onClick={handleSubmit}
               disabled={loading}
@@ -128,7 +125,6 @@ export default function DebunkerPlatform() {
                 transition={{ delay: 0.3, duration: 0.6 }}
                 className="space-y-6"
               >
-                {/* Glowing progress bar */}
                 <div className="flex items-center gap-4">
                   <Progress
                     value={analysis.truthProbability}
@@ -139,7 +135,6 @@ export default function DebunkerPlatform() {
                   </span>
                 </div>
 
-                {/* Verdict badge with neon glow */}
                 <Badge
                   variant="destructive"
                   className="inline-flex items-center gap-2 px-4 py-2 text-lg bg-[#FF6B3A]/20 border border-[#FF6B3A] text-[#FF6B3A] drop-shadow-xl contrast-150 brightness-125"
@@ -148,7 +143,6 @@ export default function DebunkerPlatform() {
                   {analysis.explanation.verdict}
                 </Badge>
 
-                {/* Evidence list */}
                 <div className="bg-black/50 backdrop-blur-md rounded-2xl p-6 py-4 space-y-4 border border-white/10 shadow-lg">
                   <h3 className="text-2xl font-semibold">Key Evidence</h3>
                   <ul className="list-disc list-inside space-y-2 text-[#ccc]">
