@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Truth Beacon",
-  description: "Truth Beacon - The Truth Meter",
+  description: "Tell us what you think is true or false",
 };
 
 export default function RootLayout({

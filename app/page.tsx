@@ -22,7 +22,7 @@ export default function DebunkerPlatform() {
   const [analysis, setAnalysis] = useState<AnalysisResult | null>(null)
   const [leaderboard, setLeaderboard] = useState<number[] | null>(null)
   const [loading, setLoading] = useState(false)
-  const [centerMode, setCenterMode] = useState(true)
+  const centerMode = true
 
   const { scrollY } = useScroll()
   const bgY = useTransform(scrollY, [0, 500], ['0%', '50%'])
